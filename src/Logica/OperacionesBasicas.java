@@ -23,7 +23,11 @@ public class OperacionesBasicas {
         return a * b;
     }
 
-    public int division(int a, int b) {
+    public int division(int a, int b) {//ejercicio 22
         return a / b;
     }
+    public int divisionModulo (int a,int b){//ejercicio 22
+        return a%b;
+    }
+    
 }
