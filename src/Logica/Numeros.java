@@ -36,7 +36,7 @@ public class Numeros {
     }
     public int sumaNumeros(int a){//ejercicio 42
         int x = 0;
-        for (int i = 0; i < a; i++) {
+        for (int i = 0; i <= a; i++) {
             x = x+i;
         }
         return x;
