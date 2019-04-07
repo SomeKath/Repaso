@@ -5,10 +5,6 @@
  */
 package Logica;
 
-/**
- *
- * @author Estudiantes
- */
 public class OperacionesBasicas {
 
     public int suma(int a, int b) {

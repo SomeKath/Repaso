@@ -5,68 +5,73 @@
  */
 package Logica;
 
-/**
- *
- * @author torre
- */
 public class Numeros {
-    
-    public String positivoNegativo(int a){//ejercicio 24
-        if (a < 0){
-            return "Es negativo";
-        }
-        else
-            if (a > 0){
-                return "Es Positivo";
-            }
-            else {
-                return "El numero es 0";
-            }
+
+    // Ejercicio 20
+    public float metros(float x) {
+        return (float) (x * 3.28);
     }
-    
-    public int siguienteSegundo(int a,int b,int c){//por revisar
+
+    public String positivoNegativo(int a) {//ejercicio 24
+        if (a < 0) {
+            return "Es negativo";
+        } else if (a > 0) {
+            return "Es Positivo";
+        } else {
+            return "El numero es 0";
+        }
+    }
+
+    public int siguienteSegundo(int a, int b, int c) {//por revisar
         return 1;
     }
-    public void cicloDoWhile(){//ejercicio 34
-        int i = 1;
-        do {            
-            System.out.println(i);
-            i =+ 1;
-        } while (i<11);
+
+    // Ejercicio 30
+    public float[] mayorMenor(float x, float y) {
+        float A[] = new float[2];
+        if (x < y) {
+            A[0] = x;
+            A[1] = y;
+        } else {
+            A[0] = y;
+            A[1] = x;
+        }
+
+        return A;
     }
-    public int sumaNumeros(int a){//ejercicio 42
+
+    public void cicloDoWhile() {//ejercicio 34
+        int i = 1;
+        do {
+            System.out.print(i + " ");
+            i++;
+        } while (i < 11);
+    }
+
+    public int sumaNumeros(int a) {//ejercicio 42
         int x = 0;
         for (int i = 0; i <= a; i++) {
-            x = x+i;
+            x = x + i;
         }
         return x;
     }
-    
-    public int factorial(int a){//ejercicio 44
+
+    public int factorial(int a) {//ejercicio 44
         int x = 1;
         for (int i = 1; i <= a; i++) {
-            x = x*i;
+            x = x * i;
         }
         return x;
     }
-    public int sumaNegativos(int a[]){//ejercicio 52, se le debe pasar un arreglo especificamente de 10 enteros dados por el usuario, por si las moscas inicialicelo en 0 :v
-        int x = 0;
-        for (int i = 0; i < 10; i++) {
-            if (a[i]<0){
-                x = (x+a[i]);
-            }
-        }
-        return x;
-    }
-    public void arregloPares(){//ejercicio 54
-        int[] a  = new int[50];
-            for (int i = 0; i <= 50; i++) {
-                for (int j = 1; j <= 100; j++) {
-                    if (j%2==0){
-                        a[i]=j;
-                        System.out.println(a[i]);
-                    }
-                }
+
+    // Ejercicio 90
+    public boolean validar(char p) {
+        if (p == '0' || p == '1' || p == '2'|| p == '3' 
+                || p == '4' || p == '5'|| p == '6' 
+                || p == '7' || p == '8' || p == '9') {
+            return true;
+        } else {
+            return false;
         }
     }
 }
