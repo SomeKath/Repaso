@@ -6,10 +6,6 @@
 
 package Logica;
 
-/**
- *
- * @author Estudiantes
- */
 public class OperacionesGeometricas {
     
     public float areaRectangulo(float a, float b){
