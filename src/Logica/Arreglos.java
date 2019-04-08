@@ -75,27 +75,6 @@ public class Arreglos {
         }
         return cont + 1;
     }
-    
-    public String posicionMayorMatriz(int[][] a){
-        //ejercicio 64
-        int mayor = 0;
-        int columna = 0;
-        int fila = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {  
-                if  (a[i][j]>mayor){
-                    mayor=(a[i][j]);
-                    columna=i+1;
-                    fila=j+1;
-                }
-            }
-        }
-        String texto = Integer.toString(columna);
-        String texto1 = Integer.toString(fila);
-        String textoFinal= texto+","+ texto1;
-        return textoFinal;
-    }
-        
 
     //Ejercicio 70
     public float[][] sumaMatriz(float M[][]) {
@@ -159,42 +138,39 @@ public class Arreglos {
         }
         System.out.println();
     }
-    public void arregloPrimos(){
-        //ejercicio 74
-        int[] a = new int [100];
-        int divisores = 0;
-        int primos = 0;
-        for (int i = 1; i <= 100; i++) {
-            for (int j = 1; j <= i; j++) {
-                if (i%j==0){
-                    divisores=divisores+1;
-                }   
+     // Ejercicio 76
+    public char[] sinEspacios(String palabra){
+        char[] A=new char[palabra.length()];
+        for (int i = 0; i < palabra.length(); i++) {
+            if (palabra.charAt(i)!=' ') {
+                A[i]=palabra.charAt(i);
             }
-            if (divisores==2){
-                    primos=primos+1;
-                        a[primos]=i;
-                } 
-            divisores=0;
         }
-        for (int i = 1; i <= 25; i++) {
-                    System.out.println(a[i]);
+        
+        return A;
+    }
+    // Ejercicio 86
+    public boolean Palind(String palabra) {
+        char[] A = palabra.toCharArray();
+        char[] B = new char[palabra.length()];
+        int k = palabra.length(), cont = 0;
+        boolean pal = true;
+
+        for (int i = 0; i < palabra.length(); i++) {
+            if (A[i] != ' ') {
+                B[k - 1] = A[i];
+                k--;
+                cont++;
+            }
         }
-    }
-    public String cadenaInvertida(String cadena){
-        //ejercicio 74
-        String cadenaInvertida = "";
-        for (int i=cadena.length()-1;i>=0;i--)
-		cadenaInvertida = cadenaInvertida + cadena.charAt(i);
-        return cadenaInvertida;
-    }
-    public void fraseAbecedario(String frase){
-        int a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z = 0;
-        for (int miau = frase.length(); miau>=0; miau--) {
-            
+        for (int i = 0; i < cont; i++) {
+            if (A[i] == B[i]) {
+                pal = true;
+            } else {
+                pal = false;
+            }
         }
+        return pal;
     }
-    public boolean compararFrase (String a, String b){
-        //ejercicio 84
-        return a.equals(b);
-    }
+    
 }
