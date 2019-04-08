@@ -26,6 +26,7 @@ public class Main {
         float x, y, A[], M[][];
         double m, n, o;
         String cadena = "";
+        String cadena2 = "";
         char p;
         boolean bool;
         do {
@@ -80,8 +81,7 @@ public class Main {
                     n = sc.nextDouble();
                     System.out.print("Ingrese c: ");
                     o = sc.nextDouble();
-                    System.out.println("El resultado de la expresion es: "
-                            + oa.evalua12(m, n, o));
+                    System.out.println("El resultado de la expresion es: " + oa.evalua12(m, n, o));
                     break;
                 case 14:
                     System.out.println("Ejercicio 14 Evaluar una expresion: ");
@@ -166,7 +166,7 @@ public class Main {
                     b = sc.nextInt();
                     System.out.print("Ingrese los segundos: ");
                     c = sc.nextInt();
-                    //System.out.println("num.segundo(a,b,c)");
+                    System.out.println(num.siguienteSegundo(a,b,c));
                     break;
                 case 34:
                     System.out.println("Ejercicio 34 Ciclo do-while:");
@@ -228,7 +228,7 @@ public class Main {
                     System.out.println("Suma de los negativos: " + ar.sumaNegativos(A));
                     break;
                 case 54:
-                    System.out.println("Ejercicio 54 Arreglo Pares 1-100:");
+                    System.out.println("Ejercicio 54 Arreglo Pares 1-100: ");
                     ar.arregloPares();
                     break;
                 case 56:
@@ -257,8 +257,18 @@ public class Main {
                     break;
                 case 64:
                     System.out.println("Ejercicio 64 Valor máximo en matriz: ");
-                    // mostrar matriz
-                    System.out.println("El valor maximo se encuentra en: " /* llamar funcion*/);
+                    int arregla [][] = new int [3][3];
+                    arregla [0][0]=32;
+                    arregla [0][1]=56;
+                    arregla [0][2]=50;
+                    arregla [1][0]=49;
+                    arregla [1][1]=99;
+                    arregla [1][2]=12;
+                    arregla [2][0]=78;
+                    arregla [2][1]=57;
+                    arregla [2][2]=89;
+                    
+                    System.out.println("El valor maximo se encuentra en: " + ar.posicionMayorMatriz(arregla));
                     break;
                 case 66:
                     System.out.println("Ejercicio 66 Matriz por escalar:");
@@ -283,14 +293,14 @@ public class Main {
                     break;
                 case 72:
                     System.out.println("Ejercicio 72 Primos entre 1-100:");
-                    //ar.primos();
+                    ar.arregloPrimos();
                     break;
                 case 74:
                     System.out.println("Ejercicio 74 Inversa cadena de caracteres:");
                     System.out.print("Ingrese una cadena de caracteres: ");
                     cadena = sc.next();
                     System.out.println("Cadena original: " + cadena);
-                    System.out.println("Cadena inversa: " /*+ ar.cadenaInversa */);
+                    System.out.println("Cadena inversa: " + ar.cadenaInvertida(cadena));
                     break;
                 case 76:
                     System.out.println("Ejercicio 76 Eliminar blancos en cadena:");
@@ -328,7 +338,9 @@ public class Main {
                     System.out.println("Ejercicio 84 Comparar dos arreglos:");
                     System.out.print("Ingrese una cadena de caracteres: ");
                     cadena = sc.next();
-                    //ar.comparar(cadena);
+                    System.out.print("Ingrese una segunda cadena de caracteres: ");
+                    cadena2 = sc.next();
+                    System.out.println(ar.compararFrase(cadena, cadena2));
                     break;
                 case 86:
                     System.out.println("Ejercicio 86 Palindromo:");
@@ -361,7 +373,7 @@ public class Main {
                     a = sc.nextInt();
                     System.out.print("De qué precio cada una: ");
                     x = sc.nextFloat();
-                    //System.out.println("Total a pagar: " + num.precio(a,x));
+                    System.out.println("Total a pagar: " + num.descuento(a,x));
                     break;
                 case 94:
                     System.out.println("Ejercicio 94 Mes:");

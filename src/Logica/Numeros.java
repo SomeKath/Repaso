@@ -22,8 +22,23 @@ public class Numeros {
         }
     }
 
-    public int siguienteSegundo(int a, int b, int c) {//por revisar
-        return 1;
+    public String siguienteSegundo(int a, int b, int c) {
+        //Ejercicio 32
+        c=c+1;
+        if (c>59){
+            c=0;
+            b=b+1;
+            if (b>59){
+                b=0;
+                a=a+1;
+                if (a>23){
+                    a=0;
+                    b=0;
+                    c=0;
+                }
+            }
+        }
+        return Integer.toString(a) + ":" + Integer.toString(b) + ":" + Integer.toString(c);
     }
 
     // Ejercicio 30
@@ -73,5 +88,16 @@ public class Numeros {
         } else {
             return false;
         }
+    }
+    public double descuento(int a,float b){
+        //ejercicio 92
+        double total=0;
+        if (a>6){
+            total = ((b*a)*(0.96));
+        }
+        if (a>12){
+            total = ((b*a)*(0.90));
+        }
+        return total;
     }
 }

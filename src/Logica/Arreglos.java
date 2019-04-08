@@ -75,6 +75,27 @@ public class Arreglos {
         }
         return cont + 1;
     }
+    
+    public String posicionMayorMatriz(int[][] a){
+        //ejercicio 64
+        int mayor = 0;
+        int columna = 0;
+        int fila = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {  
+                if  (a[i][j]>mayor){
+                    mayor=(a[i][j]);
+                    columna=i+1;
+                    fila=j+1;
+                }
+            }
+        }
+        String texto = Integer.toString(columna);
+        String texto1 = Integer.toString(fila);
+        String textoFinal= texto+","+ texto1;
+        return textoFinal;
+    }
+        
 
     //Ejercicio 70
     public float[][] sumaMatriz(float M[][]) {
@@ -137,5 +158,43 @@ public class Arreglos {
             System.out.print(c);
         }
         System.out.println();
+    }
+    public void arregloPrimos(){
+        //ejercicio 74
+        int[] a = new int [100];
+        int divisores = 0;
+        int primos = 0;
+        for (int i = 1; i <= 100; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (i%j==0){
+                    divisores=divisores+1;
+                }   
+            }
+            if (divisores==2){
+                    primos=primos+1;
+                        a[primos]=i;
+                } 
+            divisores=0;
+        }
+        for (int i = 1; i <= 25; i++) {
+                    System.out.println(a[i]);
+        }
+    }
+    public String cadenaInvertida(String cadena){
+        //ejercicio 74
+        String cadenaInvertida = "";
+        for (int i=cadena.length()-1;i>=0;i--)
+		cadenaInvertida = cadenaInvertida + cadena.charAt(i);
+        return cadenaInvertida;
+    }
+    public void fraseAbecedario(String frase){
+        int a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z = 0;
+        for (int miau = frase.length(); miau>=0; miau--) {
+            
+        }
+    }
+    public boolean compararFrase (String a, String b){
+        //ejercicio 84
+        return a.equals(b);
     }
 }
